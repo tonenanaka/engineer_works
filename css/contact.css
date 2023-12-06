@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+#contact p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.form .form_row {
+    margin-bottom: 30px;
+}
+
+.form .form_row label span {
+    color: #ff0000;
+}
+
+.form .form_row .form_content {
+    background-color: #fff;
+}
+
+.form .form_row .form_content input {
+    width: 100%;
+    height: 51px;
+}
+
+.form .form_row .form_content textarea {
+    width: 100%;
+    height: 180px;
+}
+
+.form .form_btn .send_btn {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #000;
+    padding-top: 14px;
+    padding-bottom: 15px;
+}
+
+@media screen and (min-width:900px) {
+    #contact {
+        margin-top: 80px;
+        margin-bottom: 0;
+    }
+
+    #contact p {
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+
+    /*======min-width:900px(900px以上の時)========*/
+}

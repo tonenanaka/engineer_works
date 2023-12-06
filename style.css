@@ -1,0 +1,420 @@
+/*
+Theme Name: WED
+Description: webデザイン会社のホームページです。
+Author: tone
+Version: 1.0.0
+*/
+
+@charset "UTF-8";
+
+/*
+SP ～899px
+PC 900px～
+*/
+
+/*===============
+変数宣言
+===============*/
+:root {
+    --size_base: 1.4rem;
+    --size_md: 1.6rem;
+    --size_lg: 3.6rem;
+}
+
+/*===============
+共通設定
+===============*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: var(--size_base);
+    color: #000;
+    background-color: #F0F0F0;
+}
+
+section {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+p {
+    text-align: left;
+}
+
+@media screen and (min-width:900px) {
+    section {
+        margin: 120px auto;
+    }
+
+    /*======min-width:900px(900px以上の時)========*/
+}
+
+/*===============
+共通クラス
+===============*/
+.sp_container {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.content_title {
+    font-size: var(--size_lg);
+    letter-spacing: 0.3em;
+}
+
+.sub_title {
+    display: block;
+    margin-top: 10px;
+}
+
+.sub_title::after {
+    display: block;
+    content: "";
+    width: 40px;
+    height: 25px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 34px;
+}
+
+
+@media screen and (min-width:900px) {
+    .sp_container {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .wrapper_1000 {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sub_title::after {
+        height: 37px;
+        margin-bottom: 50px;
+    }
+
+    /*======min-width:900px(900px以上の時)========*/
+}
+
+/*===============
+header
+===============*/
+header {
+    height: 80px;
+}
+
+header .header_inner .logo img {
+    width: 80px;
+    margin-top: 18px;
+}
+
+header .header_inner nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .header_inner nav ul li {
+    margin-right: 30px;
+}
+
+header .contact_btn {
+    display: none;
+}
+
+@media screen and (min-width:900px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header .header_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 6.5%;
+    }
+
+    header .header_inner .logo img {
+        width: 100px;
+        margin-top: 0;
+        margin-right: 60px;
+    }
+
+    header .contact_btn {
+        display: inline-block;
+        width: 200px;
+        height: 80px;
+        background-color: #000;
+        color: #fff;
+    }
+
+    header .contact_btn p {
+        text-align: center;
+        line-height: 80px;
+    }
+
+    /*======min-width:900px(900px以上の時)========*/
+}
+
+/*===============
+MV
+===============*/
+.main_visual {
+    display: flex;
+    align-items: flex-end;
+}
+
+.main_visual img {
+    width: 100%;
+    height: calc(100vh - 80px);
+    object-fit: cover;
+    margin-bottom: 26px;
+}
+
+
+/*===============
+NEWS
+===============*/
+.news_container .news_item {
+    margin-bottom: 40px;
+}
+
+.news_container .news_item:last-child {
+    margin-bottom: 0;
+}
+
+.news_container .news_item .news_tag {
+    padding: 3px 7px;
+    background-color: #000;
+    color: #fff;
+    margin-left: 19px;
+}
+
+.news_container .news_item .news_title {
+    margin-top: 16px;
+}
+
+@media screen and (min-width:900px) {
+    .news_container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .news_container .news_item {
+        margin-right: 20px;
+        padding-right: 80px;
+        border-right: 1px solid #000;
+    }
+
+    .news_container .news_item:last-child {
+        border-right: none;
+    }
+
+    /*======min-width:900px(900px以上の時)========*/
+}
+
+/*===============
+ABOUT
+===============*/
+.about_img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.about_right_content {
+    margin-top: 30px;
+}
+
+@media screen and (min-width:900px) {
+    #about {
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about_right_content {
+        margin-left: 70px;
+        margin-right: 97px;
+        position: relative;
+        top: 180px;
+    }
+
+    .about_img {
+        width: 60%;
+    }
+
+    /*======min-width:900px(900px以上の時)========*/
+}
+
+
+/*===============
+BUSINESS
+===============*/
+.business_contents h3 {
+    margin-bottom: 10px;
+}
+
+.business_contents h3::before {
+    content: "";
+    width: 8px;
+    height: 1px;
+    background-color: #000;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.business_contents img {
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width:900px) {
+    .business_contents {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 100px;
+        height: 714px;
+    }
+
+    .business1,
+    .business3 {
+        margin-bottom: 50px;
+    }
+
+    .content_left {
+        margin-right: 64px;
+        position: relative;
+        top: 100px;
+    }
+
+    .business_contents img {
+        margin-bottom: 0;
+    }
+
+    /*======min-width:900px(900px以上の時)========*/
+}
+
+/*===============
+COMPANY
+===============*/
+#company {
+    margin-bottom: 0;
+}
+
+.company_left {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.company_left dl {
+    padding-left: 1rem;
+}
+
+.company_left dl dt {
+    text-indent: -1rem;
+}
+
+#company img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+@media screen and (min-width:900px) {
+    #company {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .company_left {
+        width: 56.7%;
+        padding: 100px 62px;
+    }
+
+    .company_left dl {
+        width: 391px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .company_left dl dt {
+        width: 20%;
+    }
+
+    .company_left dl dd {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    #company img {
+        width: 54.7%;
+        position: absolute;
+        right: 0;
+    }
+
+    /*======min-width:900px(900px以上の時)========*/
+}
+
+/*===============
+footer
+===============*/
+footer {
+    background-color: #fff;
+}
+
+footer .footer_inner {
+    padding-top: 48px;
+    margin-bottom: 40px;
+}
+
+footer .footer_inner img {
+    width: 80px;
+}
+
+footer address {
+    font-style: normal;
+}
+
+@media screen and (min-width:900px) {
+    footer {
+        margin-top: 185px;
+    }
+
+
+    footer .footer_inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer address {
+        margin-right: 19px;
+    }
+
+    /*======min-width:900px(900px以上の時)========*/
+}
